@@ -1,3 +1,4 @@
   $(function() {
-    $( "#dragbox" ).draggable();
+    $( "#textImg" ).draggable({ revert: "invalid" });
+    $( "#imgImg" ).draggable({ revert: "invalid" });
   });
