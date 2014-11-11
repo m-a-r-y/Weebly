@@ -1,0 +1,52 @@
+#navbar {width: 250px; height: 650px; background-color: #22426d;}
+
+#btn {
+  margin: 3px;
+}
+
+.btn-block {
+display: block;
+width: 80%%;
+}
+
+.glyphicon {
+margin: 2px;
+}
+
+p {
+  color: white;
+}
+
+#navTitle {
+  text-align: center;
+}
+
+/*div#text {
+margin-right: 50%;
+}*/
+
+#container{
+  margin: auto;
+}
+
+#textImg {
+width: 48px;
+height: 50px;
+background: url(sprite.png) -4px -5px;
+margin: 3px;
+}
+
+#text{
+  float: left;
+}
+
+#imgImg {
+width: 48px;
+height: 50px;
+background: url(sprite.png) -99px -5px;
+margin: 3px;
+}
+
+#image {
+  float: left;
+}
