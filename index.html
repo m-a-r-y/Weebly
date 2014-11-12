@@ -1,52 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
   <meta charset="utf-8">
   <title>Weebly</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+
+  <script src="angular.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+  <script src="ui-bootstrap-tpls-0.11.2.js"></script>
+
   <script src="index.js"></script>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
 
-<div id="logo">
-  <div id="logoImg"></div>
-</div>
+  <div id="logo">
+    <div id="logoImg"></div>
+  </div>
 
-<div id="navbar">
+<div ng-model="navbar" id="navbar">
+
   <div id="template">
     <div id="navTitle">
       TEMPLATES
     </div>
     <div id="templatesItem">
-      <div id="item"><button type="button" class="btn btn-primary btn-sm">PAGE<span class="glyphicon glyphicon-pencil pull-right"></span> <span class="glyphicon glyphicon-remove pull-right"></span></button></div>
-      <div id="item"><input type="text" class="form-control" rows="2" placeholder="ADD NEW PAGE" >
- </div>
+      <div class="item">
+        <button type="button" class="btn btn-sm">PAGE<span class="glyphicon glyphicon-pencil pull-right"></span> <span class="glyphicon glyphicon-remove pull-right"></span></button>
+      </div>
+      <form class="form-inline" role="form">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control input-sm" placeholder="ADD NEW PAGE" ng-model="page">
+          <span class="glyphicon glyphicon-plus form-control-feedback" ng-click="addPage()"></span>
+        </div>
+      </form>
     </div>
   </div>
 
   <div id="element">
     <div id="navTitle">
-      ELEMENTS
+      ELEMENT
     </div>
-    <div id="draggable">
-      <div id="text"><div id="textImg"></div><p>Text</p></div>
-      <div id="image"><div id="imgImg"></div><p>Image</p></div>
+    <div id="elementItem">
+      <div class="draggable">
+          <div id="border1">
+              <div id="text"><div id="textImg"></div><p>TEXT</p></div>
+          </div>
+          <div id="border2">
+                  <div id="image"><div id="imgImg"></div><p>IMAGE</p></div>
+          </div>
+      </div>
     </div>
   </div>
-  </div>
+
+
+<!-- end of navbar-->
 </div>
 
 
 <div id="content">
-
-
+  {{page}}
 </div>
 
 </body>
